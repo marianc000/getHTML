@@ -1,0 +1,13 @@
+<script type="module">
+    import { attach, div } from './shared.js';
+
+    const container=document.body;
+    const host=div(123); 
+    const root=attach(host);
+    container.append(host);
+ 
+    console.log('>innerHTML',container.innerHTML);
+    console.log('>getHTML',container.getHTML());
+    console.log('>getHTML2',container.getHTML({ serializableShadowRoots: true }));
+    console.log('>getHTML3',container.getHTML({ shadowRoots: [root] }));
+</script>

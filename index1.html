@@ -1,0 +1,10 @@
+<script type="module">
+    import { attach, div } from './shared.js';
+
+    const container=document.body;
+    const host=div(123);
+    container.append(host);
+
+    console.log('>innerHTML',container.innerHTML);
+    console.log('>getHTML',container.getHTML());
+</script>
